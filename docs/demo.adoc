@@ -18,6 +18,8 @@ include::{sourcedir}/at/htl/asciidoc/FileRenamer.java[tag=rename-file,indent=0]
 <1> Some comments
 <2> Some further comments
 
+IMPORTANT: This is important
+
 == Images
 
 ifdef::backend-html5,backend-revealjs[image:animal-pet-cute-kitten-45201.jpg[width=50%]]

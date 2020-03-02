@@ -1,0 +1,87 @@
+= Doc-as-code
+Thomas W. Stütz <t.stuetz@htl-leonding.ac.at>
+2020-02-27
+:revnumber: {project-version}
+:example-caption!:
+ifndef::imagesdir[:imagesdir: images]
+ifndef::sourcedir[:sourcedir: ../../main/java]
+
+
+== Doc-as-code
+
+* Documentation as Code
+* No binary files for documentation +
+only text-files
+* Better for versioning
+* Tool-independent
+* Separation of content and formatting
+* programmer can used familiar tools
+
+== Variations
+
+* Markdown
+* Ascidoc
+
+=== Markdown
+* used in GitHub, Wikipedia, ...
+* mainly for instant viewing
+* tools for converting to other formats
+
+=== Asciidoc
+* used for documentations, slides, ...
+* drawbacks when instant viewing
+* more features than markdown (diagrams, ...)
+* tools for converting to other formats
+
+=== Asciidoc-Tooling
+
+* Asciidoc ist document-format
+* Asciidoctor is the renderer
+* ... is written in ruby
+
+[plantuml,process,png]
+----
+@startuml
+file adoc [
+
+  .adoc
+
+]
+
+cloud renderer [
+  Asciidoctor
+]
+
+file html [
+
+  .html
+
+]
+file slides [
+
+  slides in
+  .html
+
+]
+file pdf [
+
+  .pdf
+
+]
+adoc -right-> renderer
+renderer -right-> html
+renderer --> pdf
+renderer --> slides
+@enduml
+----
+
+== How to create slides
+
+* For generating the slides -> reveal.js
+* https://revealjs.com
+* You can render with / in
+** nodejs
+** shell
+** maven-plugin
+** ruby
+** docker
